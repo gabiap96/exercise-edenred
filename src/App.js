@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import "uikit/dist/css/uikit-core.min.css";
 import './App.css';
+import './css/theme.css'
+
+import React from 'react';
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+import CSVContent from "./components/CSVContent/CSVContent";
+import Layout from "./components/Layout/Layout";
+
+// loads the Icon plugin
+UIkit.use(Icons);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <div className="App standard-margin-right-left">
+        <CSVContent />
+      </div>
+    </Layout>
   );
 }
 

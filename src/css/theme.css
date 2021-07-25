@@ -1,0 +1,23 @@
+.uk-card-default {
+    background: #fff;
+    color: #666;
+}
+
+.uk-input, .uk-select, .uk-textarea {
+    max-width: 100%;
+    width: 100%;
+    border: 0 none;
+    padding: 0 10px;
+    background: #fff;
+    color: #666;
+    border: 1px solid #e5e5e5;
+    transition: .2s ease-in-out;
+    transition-property: color,background-color,border;
+}
+
+.uk-input:focus, .uk-select:focus, .uk-textarea:focus {
+    outline: none;
+    background-color: #fff;
+    color: #666;
+    border-color: #1e87f0;
+}
