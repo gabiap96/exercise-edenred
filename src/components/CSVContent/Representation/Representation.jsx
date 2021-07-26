@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import CustomTable from './CustomTable';
 import Graph from './Graph';
 
-export default function Reprezentation() {
+export default function Representation() {
     const { csv, deleteRow, addRow, editRow, dataForChart, chartableHeaders } = useContext(CSVDataContext);
     const { rows, headers } = csv;
 

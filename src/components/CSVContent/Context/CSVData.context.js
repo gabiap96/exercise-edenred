@@ -60,15 +60,16 @@ export const CSVDataProvider = ({ children }) => {
     }
 
     const csvData = () => {
-        const { rows } = csv;
+        const { rows, headers } = csv;
         const arrayRows = rows.map(row => {
             let arrayRow = [];
-            let keys = Object.keys(row)
-            keys.forEach(key => {
-                arrayRow.push(row[key])
+            let headersFields = headers.map(header => header.field)
+            headersFields.forEach(headers => {
+                arrayRow.push(row[headers] || '')
             })
             return arrayRow
         })
+        console.log("csvData:", arrayRows)
         return arrayRows;
     }
 
