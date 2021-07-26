@@ -69,7 +69,6 @@ export const CSVDataProvider = ({ children }) => {
             })
             return arrayRow
         })
-        console.log("csvData:", arrayRows)
         return arrayRows;
     }
 
