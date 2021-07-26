@@ -5,12 +5,12 @@ import { movieCharactersHeader } from '../../mocksData/csvHeaders'
 import { CSVLink } from "react-csv";
 
 export default function Menu() {
-    const { setRowsFormated, csvData } = useContext(CSVDataContext)
+    const { setRowsFormatted, csvData } = useContext(CSVDataContext)
     const csvDataObject = csvData();
     
     return (
         <div className="uk-flex uk-margin">
-            <CSVReader onFileLoaded={(data, fileInfo) => { setRowsFormated(data, movieCharactersHeader) }} />
+            <CSVReader onFileLoaded={data => { setRowsFormatted(data, movieCharactersHeader) }} />
             <CSVLink data={csvDataObject}>Download as csv</CSVLink>
         </div>
     )

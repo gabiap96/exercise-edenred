@@ -1,14 +1,14 @@
 import React from 'react'
 import { CSVDataProvider } from './Context/CSVData.context'
 import Menu from './Menu/Menu'
-import Reprezentation from './Reprezentation/Reprezentation'
+import Representation from './Representation/Representation'
 
 export default function CSVContent() {
     return (
         <div>
             <CSVDataProvider>
                 <Menu />
-                <Reprezentation />
+                <Representation />
             </CSVDataProvider>
         </div>
     )

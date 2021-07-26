@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function CustomButton({ onClick, type, children, disable }) {
+export default function CustomButton({ onClick, type, children, disabled }) {
     let classes = ["uk-button", "customButton"]
 
     switch (type) {
@@ -15,6 +15,6 @@ export default function CustomButton({ onClick, type, children, disable }) {
     }
 
     return (
-        <button className={classes.join(' ')} onClick={onClick} disabled={disable}>{children}</button>
+        <button className={classes.join(' ')} onClick={onClick} disabled={disabled}>{children}</button>
     )
 }

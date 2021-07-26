@@ -5,7 +5,7 @@ export const CSVDataContext = createContext();
 export const CSVDataProvider = ({ children }) => {
     const [csv, setCsv] = useState({ rows: [], headers: [] });
 
-    const setRowsFormated = (rows, headers) => {
+    const setRowsFormatted = (rows, headers) => {
         const rowsFormated = rows.map((row, rowIndex) => {
             let obj = { id: rowIndex }
             headers.forEach((header, headerIndex) => {
@@ -26,12 +26,12 @@ export const CSVDataProvider = ({ children }) => {
         setCsv(oldCsv => {
             const { rows, headers } = oldCsv;
 
-            let newCsv = {
+            let csvAfterDeletion = {
                 rows: rows.filter(row => !deletedRowsIds.includes(row.id)),
                 headers
             }
 
-            return newCsv;
+            return csvAfterDeletion;
         })
     }
 
@@ -90,7 +90,7 @@ export const CSVDataProvider = ({ children }) => {
 
     const value = {
         csv,
-        setRowsFormated,
+        setRowsFormatted: setRowsFormatted,
         deleteRow,
         addRow,
         editRow,
